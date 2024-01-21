@@ -1,4 +1,4 @@
-import { LuShoppingCart } from "react-icons/lu";
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
   return (
@@ -10,7 +10,7 @@ function NavBar() {
           <a href="">Link 2</a>
           <a href="">Link 3</a>
           <a href="">Link 4</a>
-          <LuShoppingCart /> 
+          <CartWidget />
         </div>
       </nav>
     </>
