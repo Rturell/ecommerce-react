@@ -4,8 +4,8 @@ function NavBar() {
   return (
     <>
       <nav>
-        <div className="flex flex-row gap-10">
-          <h2>ecommerce</h2>
+        <div className="flex flex-row gap-10 justify-center py-5 bg-black">
+          <h2 className="font-bold">ecommerce</h2>
           <a href="">Link 1</a>
           <a href="">Link 2</a>
           <a href="">Link 3</a>
