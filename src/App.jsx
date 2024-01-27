@@ -10,7 +10,7 @@ function App() {
     <>
       <NavBar />
       <HeroImage />
-      <ItemListContainer greetings={"Bienvenidos"} />
+      <ItemListContainer greetings={"Bienvenidos a la tienda"} />
       <Footer/>
     </>
   );

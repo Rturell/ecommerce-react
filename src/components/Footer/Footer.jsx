@@ -1,9 +1,12 @@
 import React from 'react'
 
+const today = new Date();
+const year = today.getFullYear();
+
 function Footer() {
   return (
     <div className="bg-black py-5">
-      <p className="text-md">© 2024 Ecommerce</p>
+      <p className="text-md">© {year} ecommerce</p>
     </div>
   );
 }
