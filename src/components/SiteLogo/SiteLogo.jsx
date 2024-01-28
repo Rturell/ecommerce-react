@@ -1,7 +1,13 @@
+import anubis from './assets/anubis.png'
+
 function SiteLogo() {
   return (
-    <img src="" alt="" />
-  )
+    <>
+      <a href="/">
+        <img className="h-[50px]" src={anubis} alt="" />
+      </a>
+    </>
+  );
 }
 
 export default SiteLogo
