@@ -7,7 +7,7 @@ function ItemListContainer({ greetings }) {
     <>
       <div className="py-20">
 
-        <div className="py-5 text-xl font-bold">{greetings}</div>
+        <div className="py-5 text-4xl font-bold">{greetings}</div>
 
         <p className="w-[100%] md:w-[65ch] px-4 pb-10 m-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iste
