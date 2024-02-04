@@ -5,7 +5,7 @@ function ItemListContainer({ greetings }) {
   
   return (
     <>
-      <div className="py-20">
+      <div className="py-20 bg-black">
 
         <div className="py-5 text-4xl font-bold">{greetings}</div>
 
