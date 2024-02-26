@@ -47,19 +47,18 @@ function Products() {
                     </h5>
                   </a>
 
-                  <p className="text-gray-dark text-sm pb-10">{product.description}</p>
+                  <p className="text-gray-dark text-sm pb-10">
+                    {product.description.substring(0, 100)}...
+                  </p>
 
                   <div className="flex items-center justify-between">
                     <span className="text-3xl font-bold text-gray-dark">
                       ${product.price}
                     </span>
 
-                    <PrimaryButton buttonText={"Add to Cart"}/>
-
+                    <PrimaryButton buttonText={"Ver Más"} />
                   </div>
-
                 </div>
-
               </div>
             </div>
           );
