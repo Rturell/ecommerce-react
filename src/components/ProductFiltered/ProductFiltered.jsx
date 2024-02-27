@@ -38,7 +38,10 @@ function ProductFiltered({ products }) {
                         ${product.price}
                       </span>
 
-                      <PrimaryButton buttonText={"Ver Más"} />
+                      <PrimaryButton
+                        buttonText={"Ver Más"}
+                        href={`/${product.id}`}
+                      />
                     </div>
                   </div>
                 </div>

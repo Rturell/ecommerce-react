@@ -56,7 +56,7 @@ function Products() {
                       ${product.price}
                     </span>
 
-                    <PrimaryButton buttonText={"Ver Más"} />
+                    <PrimaryButton buttonText={"Ver Más"} href={`products/${product.id}`} />
                   </div>
                 </div>
               </div>

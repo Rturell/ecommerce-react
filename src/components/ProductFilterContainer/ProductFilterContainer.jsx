@@ -10,7 +10,7 @@ function ProductFilterContainer() {
 
     const {category} = useParams();
 
-    const getProduct = async (category) => {
+    const getProducts = async (category) => {
         const resp = await fetch(`https://fakestoreapi.com/products/category/${category}`);
         const data = await resp.json()
         setProduct(data)
@@ -19,7 +19,7 @@ function ProductFilterContainer() {
 
     useEffect(() => {
         setIsloading(true);
-        getProduct(category);
+        getProducts(category);
     },[category])
 
   return (
