@@ -42,6 +42,7 @@ function ProductFiltered({ products }) {
                         buttonText={"Ver Más"}
                         href={`products/${product.id}`}
                       />
+                      
                     </div>
                   </div>
                 </div>
