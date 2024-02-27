@@ -6,8 +6,7 @@ import HeroImage from './components/HeroImage/HeroImage';
 import Footer from './components/Footer/Footer';
 import CartPage from './components/CartPage/CartPage';
 import ProductFilterContainer from './components/ProductFilterContainer/ProductFilterContainer';
-import ItemDetail from './components/ItemDetail/ItemDetail';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCOntainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
