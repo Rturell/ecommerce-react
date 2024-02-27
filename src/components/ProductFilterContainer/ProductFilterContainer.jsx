@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 function ProductFilterContainer() {
 
-    const [products, setProduct] = useState(null)
+    const [products, setProducts] = useState(null)
     const [isloading, setIsloading] = useState(true)
 
     const {category} = useParams();
@@ -13,7 +13,7 @@ function ProductFilterContainer() {
     const getProducts = async (category) => {
         const resp = await fetch(`https://fakestoreapi.com/products/category/${category}`);
         const data = await resp.json()
-        setProduct(data)
+        setProducts(data)
         setIsloading(false)
     }
 
