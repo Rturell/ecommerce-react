@@ -11,19 +11,19 @@ function NavBar() {
             <SiteLogo />
           </NavLink>
 
-          <NavLink className="text-white hover:text-pink" to="/products/electronics">
+          <NavLink className="text-white hover:text-pink" to="items/products/electronics">
             Electronic
           </NavLink>
 
-          <NavLink className="text-white hover:text-pink" to="/products/jewelery">
+          <NavLink className="text-white hover:text-pink" to="items/products/jewelery">
             Jewelery
           </NavLink>
 
-          <NavLink className="text-white hover:text-pink" to="/products/men's clothing">
+          <NavLink className="text-white hover:text-pink" to="items/products/men's clothing">
             Men
           </NavLink>
 
-          <NavLink className="text-white hover:text-pink" to="/products/women's clothing">
+          <NavLink className="text-white hover:text-pink" to="items/products/women's clothing">
             Woman
           </NavLink>
 

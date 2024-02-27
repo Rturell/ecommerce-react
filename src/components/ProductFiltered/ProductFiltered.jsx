@@ -40,7 +40,7 @@ function ProductFiltered({ products }) {
 
                       <PrimaryButton
                         buttonText={"Ver Más"}
-                        href={`/${product.id}`}
+                        href={`products/${product.id}`}
                       />
                     </div>
                   </div>
