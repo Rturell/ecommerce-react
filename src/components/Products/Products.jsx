@@ -1,24 +1,56 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import PrimaryButton from "../Ui/Button/PrimaryButton";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../config/firebaseConfig";
 
 function Products() {
   const [products, setProducts] = useState([]);
+  const [isloading, setIsloading] = useState(true);
+
+  const getProductsDB = () => {
+    // Referencia a la colección de nuestra base de datos
+    const myProducts = collection( db, 'products');
+    // const myProducts = category ? query( collection( db, 'products'), where( 'category', '==', category )) : collection( db, 'products');
+
+    // Obtener los documentos de la base de datos
+    getDocs(myProducts)
+      .then(response => {
+
+        // console.log(response.docs[0].data())
+        const productList = response.docs.map(doc => {
+          const item = {
+            id: doc.id,
+            ...doc.data()
+          }
+          return item;
+        } )
+        setProducts(productList)
+        setIsloading(false)
+      })
+  }
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://fakestoreapi.com/products?limit=15"
-        );
-        const json = await response.json();
-        setProducts(json);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+    setIsloading(true)
+    getProductsDB()
 
-    fetchData();
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch(
+    //       "https://fakestoreapi.com/products?limit=15"
+    //     );
+    //     const json = await response.json();
+    //     setProducts(json);
+    //   } catch (error) {
+    //     console.error("Error fetching data:", error);
+    //   }
+    // };
+
+    // fetchData();
+
+
+
+
   }, []);
 
   return (

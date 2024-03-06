@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const today = new Date();
 const year = today.getFullYear();
@@ -11,4 +12,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;
