@@ -4,7 +4,7 @@ function ProductFiltered({ products }) {
 
   return (
     <>
-      <div className="lg:container md:mx-auto">
+      <div className="lg:container md:mx-auto h-[100vh]">
         <div className="flex items-stretch flex-wrap justify-center gap-6 my-10">
           {products.map((product) => {
             return (
@@ -42,7 +42,6 @@ function ProductFiltered({ products }) {
                         buttonText={"Ver Más"}
                         href={`/products/${product.id}`}
                       />
-
                     </div>
                   </div>
                 </div>
