@@ -17,7 +17,7 @@ function ProductFiltered({ products }) {
                   <a href="#">
                     <img
                       className="p-8 rounded-t-lg w-[250px] h-[250px] object-contain m-auto"
-                      src={product.image}
+                      src={product.img}
                       alt="product image"
                     />
                   </a>

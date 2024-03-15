@@ -9,48 +9,25 @@ function Products() {
   const [isloading, setIsloading] = useState(true);
 
   const getProductsDB = () => {
-    // Referencia a la colección de nuestra base de datos
-    const myProducts = collection( db, 'products');
-    // const myProducts = category ? query( collection( db, 'products'), where( 'category', '==', category )) : collection( db, 'products');
 
-    // Obtener los documentos de la base de datos
-    getDocs(myProducts)
-      .then(response => {
+    const myProducts = collection(db, "products");
 
-        // console.log(response.docs[0].data())
-        const productList = response.docs.map(doc => {
-          const item = {
-            id: doc.id,
-            ...doc.data()
-          }
-          return item;
-        } )
-        setProducts(productList)
-        setIsloading(false)
-      })
-  }
+    getDocs(myProducts).then((response) => {
+      const productList = response.docs.map((doc) => {
+        const item = {
+          id: doc.id,
+          ...doc.data(),
+        };
+        return item;
+      });
+      setProducts(productList);
+      setIsloading(false);
+    });
+  };
 
   useEffect(() => {
-    setIsloading(true)
-    getProductsDB()
-
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch(
-    //       "https://fakestoreapi.com/products?limit=15"
-    //     );
-    //     const json = await response.json();
-    //     setProducts(json);
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error);
-    //   }
-    // };
-
-    // fetchData();
-
-
-
-
+    setIsloading(true);
+    getProductsDB();
   }, []);
 
   return (
@@ -67,7 +44,7 @@ function Products() {
                 <a href="#">
                   <img
                     className="p-8 rounded-t-lg w-[250px] h-[250px] object-contain m-auto"
-                    src={product.image}
+                    src={product.img}
                     alt="product image"
                   />
                 </a>
@@ -88,7 +65,10 @@ function Products() {
                       ${product.price}
                     </span>
 
-                    <PrimaryButton buttonText={"Ver Más"} href={`products/${product.id}`} />
+                    <PrimaryButton
+                      buttonText={"Ver Más"}
+                      href={`products/${product.id}`}
+                    />
                   </div>
                 </div>
               </div>

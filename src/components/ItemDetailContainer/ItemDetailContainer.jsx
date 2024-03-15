@@ -1,36 +1,32 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-
+import { db } from "../../config/firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState(null);
-  const [isloading, setIsloading] = useState(true);
 
   const { id } = useParams();
+  const [product, setProduct] = useState(null);
 
-  const getProduct = async (id) => {
-    const resp = await fetch(`https://fakestoreapi.com/products/${id}`);
-    const data = await resp.json();
-    console.log(data)
-    setProduct(data);
-    setIsloading(false);
+  const getProduct = (id) => {
+    const productRef = doc(db, "products", id);
+    getDoc(productRef).then((response) => {
+      const product = {
+        id: response.id,
+        ...response.data(),
+      };
+      setProduct(product);
+    });
   };
 
   useEffect(() => {
-    setIsloading(true);
     getProduct(id);
-  }, [id]);
+  }, []);
 
   return (
     <>
-      {isloading ? (
-        "Loading..."
-      ) : (
-        <div>
-          <ItemDetail product={product} />
-        </div>
-      )}
+      <ItemDetail product={product} />
     </>
   );
 }
