@@ -1,9 +1,23 @@
-import PrimaryButton from "../Ui/Button/PrimaryButton";
-import Count from "../Count/Count";
+import { Count } from "../Count/Count";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 function ItemDetail({ product }) {
   if (!product) {
     return <div>Loading...</div>;
+  }
+
+  const {addItem} = useContext(CartContext)
+
+  const onAdd = (quantity) => {
+
+    const item = {
+      id: product.id,
+      price: product.price,
+      title: product.title
+    }
+
+    addItem(item, quantity);
   }
 
   return (
@@ -23,9 +37,8 @@ function ItemDetail({ product }) {
               {product.description}
             </p>
 
-            <Count />
+            <Count onAdd={onAdd} />
 
-            <PrimaryButton buttonText={"Añadir al Carrito"} href="" />
           </div>
         </div>
       </div>
