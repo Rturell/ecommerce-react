@@ -2,43 +2,35 @@ import { Count } from "../Count/Count";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-function ItemDetail({ product }) {
-  if (!product) {
-    return <div>Loading...</div>;
-  }
-
-  const {addItem} = useContext(CartContext)
+function ItemDetail({ id, title, description, img, price, stock }) {
+  const { addItem } = useContext(CartContext);
 
   const onAdd = (quantity) => {
-
     const item = {
-      id: product.id,
-      price: product.price,
-      title: product.title
-    }
-
+      id,
+      price,
+      title,
+    };
     addItem(item, quantity);
-  }
+  };
 
   return (
     <>
       <div className="bg-white">
-        <div className="lg:container md:mx-auto h-dvh">
+        <div className="lg:container md:mx-auto min-h-dvh">
           <div>
-            <h2 className="text-black text-4xl py-10 mx-auto">
-              {product.title}
-            </h2>
-            <img
-              className="p-8 rounded-t-lg w-[350px] object-contain m-auto"
-              src={product.img}
-              alt=""
-            />
-            <p className="max-w-prose m-auto text-black py-10">
-              {product.description}
+            <h2 className="text-black text-4xl py-10 mx-auto">{title}</h2>
+            <img className="max-w-[200px] m-auto" src={img} alt="" />
+            <p className="max-w-prose m-auto text-black pt-10 pb-3">
+              {description}
             </p>
-
+            <div className="flex text-center items-center justify-center gap-2">
+              <p className="text-black">Stock: {stock}</p>
+              <p className="text-black py-5">
+                <b>Price: ${price}</b>
+              </p>
+            </div>
             <Count onAdd={onAdd} />
-
           </div>
         </div>
       </div>
@@ -46,5 +38,4 @@ function ItemDetail({ product }) {
   );
 }
 
-
-export default ItemDetail
+export default ItemDetail;

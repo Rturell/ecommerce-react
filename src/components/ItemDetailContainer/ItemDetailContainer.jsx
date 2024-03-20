@@ -5,9 +5,8 @@ import { db } from "../../config/firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 
 function ItemDetailContainer() {
-
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const [item, setItem] = useState(null);
 
   const getProduct = (id) => {
     const productRef = doc(db, "products", id);
@@ -16,7 +15,7 @@ function ItemDetailContainer() {
         id: response.id,
         ...response.data(),
       };
-      setProduct(product);
+      setItem(product);
     });
   };
 
@@ -24,11 +23,7 @@ function ItemDetailContainer() {
     getProduct(id);
   }, []);
 
-  return (
-    <>
-      <ItemDetail product={product} />
-    </>
-  );
+  return <>{item && <ItemDetail {...item} />}</>;
 }
 
 export default ItemDetailContainer;

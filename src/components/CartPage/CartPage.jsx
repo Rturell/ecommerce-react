@@ -78,7 +78,7 @@ function CartPage() {
               </button>
               <Link to="/checkout">
                 <button className="bg-pink border-none text-white">
-                  Comprar
+                  Checkout
                 </button>
               </Link>
             </>
