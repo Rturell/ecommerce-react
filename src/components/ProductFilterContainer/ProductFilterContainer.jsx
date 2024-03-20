@@ -5,10 +5,9 @@ import { collection, doc, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
 
 function ProductFilterContainer() {
-  const [products, setProducts] = useState(null);
-  const [isloading, setIsloading] = useState(true);
-
   const { category } = useParams();
+  const [products, setProducts] = useState(null);
+  const [isLoading, setIsloading] = useState(true);
 
   const getProducts = (category) => {
 
@@ -34,12 +33,10 @@ function ProductFilterContainer() {
 
   return (
     <>
-      {isloading ? (
-        "Loading..."
+      {isLoading ? (
+        <h2>Cargando productos ...</h2>
       ) : (
-        <div>
-          <ProductFiltered products={products} />
-        </div>
+        <ProductFiltered products={products} />
       )}
     </>
   );
