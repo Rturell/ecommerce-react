@@ -29,7 +29,7 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/products/:id" element={<ItemDetailContainer />} />
             <Route
-              path="items/products/:category"
+              path="/items/products/:category"
               element={<ProductFilterContainer />}
             />
             <Route path="*" element={<h1> Pagina no encontrada!</h1>} />
