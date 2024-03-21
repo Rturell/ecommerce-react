@@ -53,7 +53,7 @@ function CartPage() {
               <p>Subtotal: ${item.subTotal}</p>
               <div>
                 <button
-                  className="mt-5 text-white text-sm bg-orange border-none"
+                  className="mt-5 text-white text-sm bg-orange border-none mb-10"
                   onClick={() => handleDeleteItem(item)}
                 >
                   Eliminar Item
