@@ -8,6 +8,7 @@ import CartPage from "./components/CartPage/CartPage";
 import ProductFilterContainer from "./components/ProductFilterContainer/ProductFilterContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartContextProvider } from "./context/CartContext";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               element={<ProductFilterContainer />}
             />
             <Route path="*" element={<h1> Pagina no encontrada!</h1>} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </BrowserRouter>
