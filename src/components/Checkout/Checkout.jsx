@@ -69,7 +69,7 @@ function Checkout() {
           <h2 className="text-xl font-bold">
             La compra se ha realizado con exito!
           </h2>
-          <p>Su numero de orden es: {orderId}</p>
+          <p>Su número de orden es: {orderId}</p>
         </div>
       </>
     );
