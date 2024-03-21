@@ -1,6 +1,8 @@
 import { Count } from "../Count/Count";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ItemDetail({ id, title, description, img, price, stock }) {
   const { addItem } = useContext(CartContext);
@@ -11,7 +13,10 @@ function ItemDetail({ id, title, description, img, price, stock }) {
       price,
       title,
     };
+
     addItem(item, quantity);
+    toast(`"${title}" ha sido añadido al carrito!`);
+    
   };
 
   return (

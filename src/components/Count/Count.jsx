@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+
 
 export const Count = ({ stock, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -6,9 +8,9 @@ export const Count = ({ stock, initial = 1, onAdd }) => {
   const increment = () => {
     return setCount(count + 1);
   };
-  
+
   const decrement = () => {
-    if (count >! 0) {
+    if (count > !0) {
       setCount(count - 1);
     }
   };
@@ -30,6 +32,7 @@ export const Count = ({ stock, initial = 1, onAdd }) => {
       >
         Agregar al carrito
       </button>
+      <ToastContainer />
     </div>
   );
 };

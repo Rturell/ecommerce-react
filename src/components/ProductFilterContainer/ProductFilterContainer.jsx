@@ -34,7 +34,7 @@ function ProductFilterContainer() {
   return (
     <>
       {isLoading ? (
-        <h2>Cargando productos ...</h2>
+        <h2>Loading ...</h2>
       ) : (
         <ProductFiltered products={products} />
       )}

@@ -77,7 +77,11 @@ function Checkout() {
 
   return (
     <>
-      <div className="w-full max-w-xs min-h-[100vh] mt-10 mx-auto">
+      <div className="w-full max-w-lg min-h-[100vh] mt-10 mx-auto px-5">
+        <h2 className="text-white text-xl font-bold pb-10">
+          Complete sus datos para finalizar la compra:
+        </h2>
+
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={handleSubmit}
@@ -137,7 +141,7 @@ function Checkout() {
           <div className="mb-4">
             <input
               type="submit"
-              className="text-white bg-pink p-3 rounded-md"
+              className="text-white bg-purple p-3 rounded-md cursor-pointer hover:bg-pink"
               value="Finalizar la compra"
             />
           </div>

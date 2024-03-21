@@ -53,10 +53,10 @@ function CartPage() {
               <p>Subtotal: ${item.subTotal}</p>
               <div>
                 <button
-                  className="mt-10 text-white bg-orange border-none"
+                  className="mt-5 text-white text-sm bg-orange border-none"
                   onClick={() => handleDeleteItem(item)}
                 >
-                  Eliminar
+                  Eliminar Item
                 </button>
               </div>
             </div>
@@ -71,13 +71,13 @@ function CartPage() {
                 Total de la compra: <b>${total}</b>
               </h4>
               <button
-                className="me-5 bg-orange border-none text-white"
+                className="me-5 bg-gray-dark hover:bg-gray border-none text-white"
                 onClick={() => handleClearCart()}
               >
                 Vaciar Carrito
               </button>
               <Link to="/checkout">
-                <button className="bg-pink border-none text-white">
+                <button className="bg-purple hover:bg-pink border-none text-white">
                   Checkout
                 </button>
               </Link>
