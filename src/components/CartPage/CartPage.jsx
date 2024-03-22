@@ -49,7 +49,7 @@ function CartPage() {
               <p key={item.id}>Producto: {item.title} </p>
               <img src={item.image} alt="" />
               <p>Cantidad: {item.quantity} </p>
-              <p>Precio Unitario: {item.price} </p>
+              <p>Precio por unidad: ${item.price} </p>
               <p>Subtotal: ${item.subTotal}</p>
               <div>
                 <button

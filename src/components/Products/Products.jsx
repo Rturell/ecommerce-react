@@ -32,11 +32,11 @@ function Products() {
 
   return (
     <div className="lg:container md:mx-auto">
-      <div className="flex items-stretch flex-wrap justify-center gap-6">
+      <div className="px-5 flex items-stretch flex-wrap justify-center gap-6">
         {products.map((product, index) => {
           return (
             <div key={index}>
-              <div className="min-w-[400px] w-100 max-w-sm bg-white border border-gray rounded-lg shadow">
+              <div className="w-100 max-w-sm bg-white border border-gray rounded-lg shadow">
                 <span className="bg-blue text-white text-xs font-semibold px-2.5 py-1.5">
                   {product.category}
                 </span>

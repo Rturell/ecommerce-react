@@ -22,7 +22,7 @@ function App() {
               element={
                 <>
                   <HeroImage />
-                  <ItemListContainer greetings={"Bienvenidos a la tienda"} />
+                  <ItemListContainer greetings={"Welcome to the store"} />
                 </>
               }
             />

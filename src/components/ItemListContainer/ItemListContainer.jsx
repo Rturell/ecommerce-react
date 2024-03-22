@@ -6,16 +6,16 @@ function ItemListContainer({ greetings }) {
   return (
     <>
       <div className="py-20 bg-black">
-
         <div className="py-5 text-4xl font-bold">{greetings}</div>
 
         <p className="w-[100%] md:w-[65ch] px-4 pb-10 m-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iste
-          voluptatem consequatur ab doloribus rem eveniet error voluptas.
+          Welcome to our online store, your destination for fashion,
+          electronics, and jewelry. Discover the latest trends in clothing,
+          cutting-edge gadgets, and stunning jewelry pieces. Shop now to elevate
+          your style and stay connected with the latest innovations.
         </p>
 
-        <Products/>
-
+        <Products />
       </div>
     </>
   );

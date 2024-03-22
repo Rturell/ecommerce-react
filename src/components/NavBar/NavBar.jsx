@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <>
       <nav>
-        <div className="flex flex-row gap-10 justify-center py-5 bg-black items-center">
+        <div className="flex flex-col sm:flex-row sm:gap-10 justify-center py-5 bg-black items-center">
           <NavLink className="text-white hover:text-pink" to="/">
             <SiteLogo />
           </NavLink>

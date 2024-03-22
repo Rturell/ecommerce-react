@@ -5,11 +5,11 @@ function ProductFiltered({ products }) {
   return (
     <>
       <div className="lg:container md:mx-auto h-[100vh]">
-        <div className="flex items-stretch flex-wrap justify-center gap-6 my-10">
+        <div className="flex items-stretch flex-wrap justify-center px-5 gap-6 my-10">
           {products.map((product) => {
             return (
               <div key={product.id}>
-                <div className="min-w-[400px] w-100 max-w-sm bg-white border border-gray rounded-lg shadow">
+                <div className="w-100 max-w-sm bg-white border border-gray rounded-lg shadow">
                   <span className="bg-blue text-white text-xs font-semibold px-2.5 py-1.5">
                     {product.category}
                   </span>
