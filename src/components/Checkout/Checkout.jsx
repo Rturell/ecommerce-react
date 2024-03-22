@@ -67,7 +67,7 @@ function Checkout() {
       <>
         <div className="min-h-[100vh] pt-20 text-center w-[100%]">
           <h2 className="text-xl font-bold">
-            La compra se ha realizado con exito!
+            La compra se ha realizado con éxito!
           </h2>
           <p>Su número de orden es: {orderId}</p>
         </div>
@@ -130,7 +130,7 @@ function Checkout() {
             <input
               className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
-              type="text"
+              type="email"
               placeholder="tucorreo@test.com"
               value={formCheckout.email}
               onChange={handleEmail}
