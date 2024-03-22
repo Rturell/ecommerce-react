@@ -21,4 +21,4 @@ Este es un proyecto de ecommerce desarrollado con React que ofrece una plataform
 1. Clona el repositorio: `git clone https://github.com/tu-usuario/tu-proyecto.git`
 2. Ve al directorio del proyecto: `cd tu-proyecto`
 3. Instala las dependencias: `npm install`
-4. Inicia la aplicación: `npm start`
+4. Inicia la aplicación: `npm run dev`
